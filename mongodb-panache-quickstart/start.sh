@@ -1,0 +1,1 @@
+./mvnw clean quarkus:dev -U -Dquarkus.profile=dev -Ddebug=5001
