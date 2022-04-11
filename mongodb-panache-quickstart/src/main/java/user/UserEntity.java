@@ -17,7 +17,7 @@ import lombok.experimental.SuperBuilder;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-@MongoEntity(database = "userDB", collection = "users")
+@MongoEntity(collection = "users")
 public class UserEntity extends BaseMongoEntity {
 
     String name;

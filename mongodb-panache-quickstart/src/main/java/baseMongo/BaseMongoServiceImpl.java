@@ -1,12 +1,13 @@
 package baseMongo;
 
 import base.BaseServiceImpl;
-import io.quarkus.arc.properties.IfBuildProperty;
-import io.smallrye.mutiny.Uni;
+import io.smallrye.mutiny.Multi;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.bson.types.ObjectId;
+
+import java.util.List;
 
 
 @NoArgsConstructor
@@ -23,7 +24,7 @@ public abstract class BaseMongoServiceImpl<T extends BaseMongoEntity>
         this.repository = repository;
     }
 
-    public Uni<T> get(String id) {
-        return repository.get(new ObjectId(id));
+    public Multi<T> getByIds(List<String> ids) {
+        return repository.getByIds(ids);
     }
 }

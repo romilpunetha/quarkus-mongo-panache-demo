@@ -19,7 +19,6 @@ import org.bson.types.ObjectId;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public abstract class BaseMongoEntity extends BaseEntity<ObjectId> {
 
-
     String tenantId;
 
 }

@@ -8,6 +8,5 @@ import org.bson.types.ObjectId;
 
 @IfBuildProperty(name = "mongodb.enabled", stringValue = "true")
 public interface BaseMongoRepository<T extends BaseMongoEntity>
-        extends ReactivePanacheMongoRepository<T>,
-        BaseRepository<T, ObjectId> {
+        extends ReactivePanacheMongoRepository<T>, BaseRepository<T, ObjectId> {
 }

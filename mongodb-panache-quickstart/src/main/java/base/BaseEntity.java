@@ -6,7 +6,6 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 import lombok.experimental.SuperBuilder;
 
-
 @SuperBuilder(toBuilder = true)
 @Getter
 @Setter

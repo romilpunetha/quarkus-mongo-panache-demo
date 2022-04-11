@@ -1,14 +1,14 @@
 package base;
 
+import io.smallrye.mutiny.Multi;
 import io.smallrye.mutiny.Uni;
-import user.UserEntity;
 
-import java.util.concurrent.ExecutionException;
+import java.util.List;
 
 public interface BaseService<T extends BaseEntity<ID>, ID> {
 
-    Uni<UserEntity> create(UserEntity user);
+    Uni<T> create(T user);
 
-    Uni<T> get(String id);
+    Multi<T> getByIds(List<String> ids);
 
 }
